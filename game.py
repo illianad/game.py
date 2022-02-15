@@ -54,6 +54,25 @@ def game_start():
             print("Try to input integer value")
           else:
             pick=int(pick)
+            while True:
+              if pick>10:
+                pick=input("Oh it seems like you enetered the value out of the range (1-10)try again: ")
+                try:
+                  pick=int(pick) 
+                except ValueError:
+                  print("Try to input integer value")
+                else:
+                  pick=int(pick)
+              elif pick<0:
+                pick=input("Oh it seems like you enetered the value out of the range (1-10)try again: ")
+                try:
+                  pick=int(pick) 
+                except ValueError:
+                  print("Try to input integer value")
+                else:
+                  pick=int(pick)
+              else:
+                break
         elif pick>random_number:
           print("It's lower")
           pick=input("Pick again ")
@@ -63,33 +82,6 @@ def game_start():
             print("Try to input integer value")
           else:
             pick=int(pick)
-          while True:
-            if pick>10:
-              pick=input("Oh it seems like you enetered the value out of the range (1-10)try again: ")
-              try:
-                pick=int(pick) 
-              except ValueError:
-                print("Try to input integer value")
-              else:
-                pick=int(pick)
-            elif pick<0:
-              pick=input("Oh it seems like you enetered the value out of the range (1-10)try again: ")
-              try:
-                pick=int(pick) 
-              except ValueError:
-                print("Try to input integer value")
-              else:
-                pick=int(pick)
-            elif pick == str:
-              pick=input("Oh it seems like you enetered the value out of the range (1-10)try again: ")
-              try:
-                pick=int(pick) 
-              except ValueError:
-                print("Try to input integer value")
-              else:
-                pick=int(pick)
-            else:
-              break
           while True:
             if pick>10:
               pick=input("Oh it seems like you enetered the value out of the range (1-10)try again: ")
