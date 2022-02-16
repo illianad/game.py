@@ -2,7 +2,7 @@ import random
 
 def game_start():
   attempts1=0 
-  name=input("It seems like you are a bit bored.What is your name?")
+  name=input("It seems like you are a bit bored.What is your name? ")
   print("WELCOME TO THE GUESSING GAME, {}".format(name))
   random_number=(random.randint(1,10))
   random_number=int(random_number)
@@ -44,7 +44,7 @@ def game_start():
               break
         else:
           pick=int(pick)
-      elif pick<0:
+      elif pick<1:
         pick=input("Oh it seems like you enetered the value out of the range (1-10)try again: ")
         try:
           pick=int(pick) 
@@ -107,7 +107,7 @@ def game_start():
                       break
                 else:
                   pick=int(pick)
-              elif pick<0:
+              elif pick<1:
                 pick=input("Oh it seems like you enetered the value out of the range (1-10)try again: ")
                 try:
                   pick=int(pick) 
@@ -166,7 +166,7 @@ def game_start():
                       break
                 else:
                   pick=int(pick)
-              elif pick<0:
+              elif pick<1:
                 pick=input("Oh it seems like you enetered the value out of the range (1-10)try again: ")
                 try:
                   pick=int(pick) 
@@ -304,7 +304,7 @@ def game_start():
                         break
                   else:
                     pick=int(pick)
-                elif pick<0:
+                elif pick<1:
                   pick=input("Oh it seems like you enetered the value out of the range (1-10)try again: ")
                   try:
                     pick=int(pick) 
@@ -363,7 +363,7 @@ def game_start():
                         break
                   else:
                     pick=int(pick)
-                elif pick<0:
+                elif pick<1:
                   pick=input("Oh it seems like you enetered the value out of the range (1-10)try again: ")
                   try:
                     pick=int(pick) 
