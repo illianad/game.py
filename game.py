@@ -12,8 +12,19 @@ def game_start():
     pick=int(pick) 
   except ValueError:
     print("Try to input integer value")
+    pick=input("Pick again: ")
+    while True:
+      try:
+        pick=int(pick)
+      except ValueError:
+        print("Try to input integer value")
+        pick=input("Pick again: ")  
+      else:
+        pick=int(pick)
+        break
   else:
     pick=int(pick)
+  finally:
     while True:
       if pick>10:
         pick=input("Oh it seems like you enetered the value out of the range (1-10)try again: ")
@@ -21,6 +32,16 @@ def game_start():
           pick=int(pick) 
         except ValueError:
           print("Try to input integer value")
+          pick=input("Pick again: ")
+          while True:
+            try:
+              pick=int(pick)
+            except ValueError:
+              print("Try to input integer value")
+              pick=input("Pick again: ")  
+            else:
+              pick=int(pick)
+              break
         else:
           pick=int(pick)
       elif pick<0:
@@ -29,14 +50,16 @@ def game_start():
           pick=int(pick) 
         except ValueError:
           print("Try to input integer value")
-        else:
-          pick=int(pick)
-      elif pick == str:
-        pick=input("Oh it seems like you enetered the value out of the range (1-10)try again: ")
-        try:
-          pick=int(pick) 
-        except ValueError:
-          print("Try to input integer value")
+          pick=input("Pick again: ")
+          while True:
+            try:
+              pick=int(pick)
+            except ValueError:
+              print("Try to input integer value")
+              pick=input("Pick again: ")  
+            else:
+              pick=int(pick)
+              break
         else:
           pick=int(pick)
       else:
@@ -52,8 +75,19 @@ def game_start():
             pick=int(pick) 
           except ValueError:
             print("Try to input integer value")
+            pick=input("Pick again: ")
+            while True:
+              try:
+                pick=int(pick)
+              except ValueError:
+                print("Try to input integer value")
+                pick=input("Pick again: ")  
+              else:
+                pick=int(pick)
+                break
           else:
             pick=int(pick)
+          finally:
             while True:
               if pick>10:
                 pick=input("Oh it seems like you enetered the value out of the range (1-10)try again: ")
@@ -61,6 +95,16 @@ def game_start():
                   pick=int(pick) 
                 except ValueError:
                   print("Try to input integer value")
+                  pick=input("Pick again: ")
+                  while True:
+                    try:
+                      pick=int(pick)
+                    except ValueError:
+                      print("Try to input integer value")
+                      pick=input("Pick again: ")  
+                    else:
+                      pick=int(pick)
+                      break
                 else:
                   pick=int(pick)
               elif pick<0:
@@ -69,6 +113,16 @@ def game_start():
                   pick=int(pick) 
                 except ValueError:
                   print("Try to input integer value")
+                  pick=input("Pick again: ")
+                  while True:
+                    try:
+                      pick=int(pick)
+                    except ValueError:
+                      print("Try to input integer value")
+                      pick=input("Pick again: ")  
+                    else:
+                      pick=int(pick)
+                      break
                 else:
                   pick=int(pick)
               else:
@@ -80,35 +134,58 @@ def game_start():
             pick=int(pick) 
           except ValueError:
             print("Try to input integer value")
+            pick=input("Pick again: ")
+            while True:
+              try:
+                pick=int(pick)
+              except ValueError:
+                print("Try to input integer value")
+                pick=input("Pick again: ")  
+              else:
+                pick=int(pick)
+                break
           else:
             pick=int(pick)
-          while True:
-            if pick>10:
-              pick=input("Oh it seems like you enetered the value out of the range (1-10)try again: ")
-              try:
-                pick=int(pick) 
-              except ValueError:
-                print("Try to input integer value")
+          finally:
+            while True:
+              if pick>10:
+                pick=input("Oh it seems like you enetered the value out of the range (1-10)try again: ")
+                try:
+                  pick=int(pick) 
+                except ValueError:
+                  print("Try to input integer value")
+                  pick=input("Pick again: ")
+                  while True:
+                    try:
+                      pick=int(pick)
+                    except ValueError:
+                      print("Try to input integer value")
+                      pick=input("Pick again: ")  
+                    else:
+                      pick=int(pick)
+                      break
+                else:
+                  pick=int(pick)
+              elif pick<0:
+                pick=input("Oh it seems like you enetered the value out of the range (1-10)try again: ")
+                try:
+                  pick=int(pick) 
+                except ValueError:
+                  print("Try to input integer value")
+                  pick=input("Pick again: ")
+                  while True:
+                    try:
+                      pick=int(pick)
+                    except ValueError:
+                      print("Try to input integer value")
+                      pick=input("Pick again: ")  
+                    else:
+                      pick=int(pick)
+                      break
+                else:
+                  pick=int(pick)
               else:
-                pick=int(pick)
-            elif pick<0:
-              pick=input("Oh it seems like you enetered the value out of the range (1-10)try again: ")
-              try:
-                pick=int(pick) 
-              except ValueError:
-                print("Try to input integer value")
-              else:
-                pick=int(pick)
-            elif pick == str:
-              pick=input("Oh it seems like you enetered the value out of the range (1-10)try again: ")
-              try:
-                pick=int(pick) 
-              except ValueError:
-                print("Try to input integer value")
-              else:
-                pick=int(pick)
-            else:
-              break
+                break
     else:
       print("The game is over {}. The number was {}.You used {} tries to guess the number. Thank you for playing".format(name,random_number,attempts1))
 
@@ -130,27 +207,59 @@ def game_start():
       try:
         pick=int(pick) 
       except ValueError:
-        raise ValueError("Try to input integer value")
-      pick=int(pick)
-      while True:
-        if pick>10:
-          pick=input("Oh it seems like you enetered the value out of the range (1-10)try again: ")
+        print("Try to input integer value")
+        pick=input("Pick again: ")
+        while True:
           try:
-            pick=int(pick) 
+            pick=int(pick)
           except ValueError:
             print("Try to input integer value")
+            pick=input("Pick again: ")  
           else:
             pick=int(pick)
-        elif pick<0:
-          pick=input("Oh it seems like you enetered the value out of the range (1-10)try again: ")
-          try:
-            pick=int(pick) 
-          except ValueError:
-            print("Try to input integer value")
+            break
+      else:
+        pick=int(pick)
+      finally:
+        while True:
+          if pick>10:
+            pick=input("Oh it seems like you enetered the value out of the range (1-10)try again: ")
+            try:
+              pick=int(pick) 
+            except ValueError:
+              print("Try to input integer value")
+              pick=input("Pick again: ")
+              while True:
+                try:
+                  pick=int(pick)
+                except ValueError:
+                  print("Try to input integer value")
+                  pick=input("Pick again: ")  
+                else:
+                  pick=int(pick)
+                  break
+            else:
+              pick=int(pick)
+          elif pick<0:
+            pick=input("Oh it seems like you enetered the value out of the range (1-10)try again: ")
+            try:
+              pick=int(pick) 
+            except ValueError:
+              print("Try to input integer value")
+              pick=input("Pick again: ")
+              while True:
+                try:
+                  pick=int(pick)
+                except ValueError:
+                  print("Try to input integer value")
+                  pick=input("Pick again: ")  
+                else:
+                  pick=int(pick)
+                  break
+            else:
+              pick=int(pick)
           else:
-            pick=int(pick)
-        else:
-          break
+            break
       
       while pick !=random_number:
           attempts2 +=1
@@ -163,35 +272,58 @@ def game_start():
               pick=int(pick) 
             except ValueError:
               print("Try to input integer value")
+              pick=input("Pick again: ")
+              while True:
+                try:
+                  pick=int(pick)
+                except ValueError:
+                  print("Try to input integer value")
+                  pick=input("Pick again: ")  
+                else:
+                  pick=int(pick)
+                  break
             else:
               pick=int(pick)
-            while True:
-              if pick>10:
-                pick=input("Oh it seems like you enetered the value out of the range (1-10)try again: ")
-                try:
-                  pick=int(pick) 
-                except ValueError:
-                  print("Try to input integer value")
+            finally:
+              while True:
+                if pick>10:
+                  pick=input("Oh it seems like you enetered the value out of the range (1-10)try again: ")
+                  try:
+                    pick=int(pick) 
+                  except ValueError:
+                    print("Try to input integer value")
+                    pick=input("Pick again: ")
+                    while True:
+                      try:
+                        pick=int(pick)
+                      except ValueError:
+                        print("Try to input integer value")
+                        pick=input("Pick again: ")  
+                      else:
+                        pick=int(pick)
+                        break
+                  else:
+                    pick=int(pick)
+                elif pick<0:
+                  pick=input("Oh it seems like you enetered the value out of the range (1-10)try again: ")
+                  try:
+                    pick=int(pick) 
+                  except ValueError:
+                    print("Try to input integer value")
+                    pick=input("Pick again: ")
+                    while True:
+                      try:
+                        pick=int(pick)
+                      except ValueError:
+                        print("Try to input integer value")
+                        pick=input("Pick again: ")  
+                      else:
+                        pick=int(pick)
+                        break
+                  else:
+                    pick=int(pick)
                 else:
-                  pick=int(pick)
-              elif pick<0:
-                pick=input("Oh it seems like you enetered the value out of the range (1-10)try again: ")
-                try:
-                  pick=int(pick) 
-                except ValueError:
-                  print("Try to input integer value")
-                else:
-                  pick=int(pick)
-              elif pick == str:
-                pick=input("Oh it seems like you enetered the value out of the range (1-10)try again: ")
-                try:
-                  pick=int(pick) 
-                except ValueError:
-                  print("Try to input integer value")
-                else:
-                  pick=int(pick)
-              else:
-                break
+                  break
           elif pick>random_number:
             print("It's lower")
             pick=input("Pick again ")
@@ -199,35 +331,58 @@ def game_start():
               pick=int(pick) 
             except ValueError:
               print("Try to input integer value")
+              pick=input("Pick again: ")
+              while True:
+                try:
+                  pick=int(pick)
+                except ValueError:
+                  print("Try to input integer value")
+                  pick=input("Pick again: ")  
+                else:
+                  pick=int(pick)
+                  break
             else:
               pick=int(pick)
-            while True:
-              if pick>10:
-                pick=input("Oh it seems like you enetered the value out of the range (1-10)try again: ")
-                try:
-                  pick=int(pick) 
-                except ValueError:
-                  print("Try to input integer value")
+            finally:
+              while True:
+                if pick>10:
+                  pick=input("Oh it seems like you enetered the value out of the range (1-10)try again: ")
+                  try:
+                    pick=int(pick) 
+                  except ValueError:
+                    print("Try to input integer value")
+                    pick=input("Pick again: ")
+                    while True:
+                      try:
+                        pick=int(pick)
+                      except ValueError:
+                        print("Try to input integer value")
+                        pick=input("Pick again: ")  
+                      else:
+                        pick=int(pick)
+                        break
+                  else:
+                    pick=int(pick)
+                elif pick<0:
+                  pick=input("Oh it seems like you enetered the value out of the range (1-10)try again: ")
+                  try:
+                    pick=int(pick) 
+                  except ValueError:
+                    print("Try to input integer value")
+                    pick=input("Pick again: ")
+                    while True:
+                      try:
+                        pick=int(pick)
+                      except ValueError:
+                        print("Try to input integer value")
+                        pick=input("Pick again: ")  
+                      else:
+                        pick=int(pick)
+                        break
+                  else:
+                    pick=int(pick)
                 else:
-                  pick=int(pick)
-              elif pick<0:
-                pick=input("Oh it seems like you enetered the value out of the range (1-10)try again: ")
-                try:
-                  pick=int(pick) 
-                except ValueError:
-                  print("Try to input integer value")
-                else:
-                  pick=int(pick)
-              elif pick == str:
-                pick=input("Oh it seems like you enetered the value out of the range (1-10)try again: ")
-                try:
-                  pick=int(pick) 
-                except ValueError:
-                  print("Try to input integer value")
-                else:
-                  pick=int(pick)
-              else:
-                break
+                  break
       print("The game is over {}. The number was {}.You used {} tries to guess the number. Thank you for playing".format(name,random_number, attempts2))
       again=input("Do you want to play adain?\n(Enter y/n) ")
       while True:
